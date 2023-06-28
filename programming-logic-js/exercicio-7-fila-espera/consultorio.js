@@ -19,10 +19,10 @@ do {
       break
     case "2":
       const pacienteConsultado = fila.shift()
-      if (fila.length > 0) {
-        alert ("O(a) paciente " + pacienteConsultado + " Foi consultado(a), portanto foi removido da fila de espera.")
-      } else{
-        alert("A lista de espera está vazia. Não há pacientes ainda.")
+      if (!pacienteConsultado) {
+        alert("A fila de espera está vazia. Não há pacientes na fila!")
+      } else {
+        alert(pacienteConsultado + " foi removido da fila.")
       }
       break
     case "3":
