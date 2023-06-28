@@ -22,7 +22,7 @@ do {
       if (!pacienteConsultado) {
         alert("A fila de espera está vazia. Não há pacientes na fila!")
       } else {
-        alert(pacienteConsultado + " foi removido da fila.")
+        alert( "O(A)" + pacienteConsultado + " foi consultado, portanto foi removido da fila.")
       }
       break
     case "3":
