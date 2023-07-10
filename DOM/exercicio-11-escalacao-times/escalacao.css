@@ -25,12 +25,21 @@ body {
   color: var(--cor-black);
 }
 
-container {
+h1  {
+  font-weight: 700;
+  color: var(--cor-lightgreen);
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   background-color: var(--cor-white);
-  padding: 3rem 9rem;
+  padding: 3rem 12rem;
   margin: 2rem;
 }
 
@@ -38,6 +47,7 @@ container {
 .container-add div {
   display: flex;
   flex-direction: column;
+  font-weight: 300;
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 0.6rem;
@@ -46,18 +56,11 @@ container {
 .container-remove div {
   display: flex;
   flex-direction: column;
+  font-weight: 300;
   padding-top: 1rem;
   padding-bottom: 1rem;
   gap: 0.6rem;
 }
-
-
-input-box {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.1rem;
-}
-
 
 button {
   outline: none;
