@@ -1,11 +1,28 @@
+let maxPlayers;
+
+function showOptions() {
+  const sport = document.getElementById('sports').value
+
+  if (sport === 'football') {
+    maxPlayers = 11;
+  } else if (sport === 'handball') {
+    maxPlayers = 7;
+  } else if (sport === 'volleyball') {
+    maxPlayers = 6;
+  } 
+}
+
 function addPlayer() {
   const  position = document.getElementById('position').value
   const  name = document.getElementById('name').value
   const  number = document.getElementById('number').value
 
+  const teamList = document.getElementById('team-list')
+  const currentPlayers = teamList.children.length
+
   const confirmation = confirm("Deseja escalar " + name + " como " + position + "?") 
 
-  if (confirmation) {
+  if (confirmation && currentPlayers < maxPlayers) {
     const teamList = document.getElementById('team-list')
     const playerItem = document.createElement('li')
 
@@ -18,6 +35,9 @@ function addPlayer() {
     document.getElementById('position').value = ''
     document.getElementById('name').value = ''
     document.getElementById('number').value = ''
+  } else {
+    alert("Você atingiu o número máximo de jogadores no time")
+    return
   }
 }
 
