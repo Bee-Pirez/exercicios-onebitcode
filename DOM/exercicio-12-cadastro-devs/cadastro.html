@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./cadastro.css">
+  <title>Cadastor de Devs</title>
+</head>
+<body>
+  <section>
+    <div class="titles">
+      <h1>Cadastro de Devs</h1>
+      <p>Complete suas informações</p>
+    </div>
+    <form id="devForm">
+      <label class="rótulo" for="fullname">Nome Completo Dev:</label>
+      <input type="text" name="fullname" id="fullname"><br><br>
+      
+      <label class="rótulo">Adicione as tecnologias que utiliza:</label><br>
+      <button id="addTechBtn" type="button">Adicionar Nova</button>
+      <ul id="stackInputs"></ul>
+      <br>
+      <button class="submitBtn" type="submit">Cadastrar</button>
+    </form>
+  </section>
+
+  <script src="./cadastro.js"></script>
+</body>
+</html>
