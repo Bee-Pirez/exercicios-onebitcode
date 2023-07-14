@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;400;700&display=swap');
+
+
+:root {
+  --cor-purple: #7E0F8C;
+  --cor-blue: #080F8C;
+  --cor-lightBlue: #8396EB;
+  --cor-white: #F2F2F2;
+  --cor-black: #0f0f16;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+section {
+  background: var(--cor-white);
+  padding: 3rem;
+  margin: 8rem;
+  border-radius: 1.25rem;
+  box-shadow: 16px 19px 40px 10px rgba(0, 0, 0, 0.25);
+}
+
+.titles {
+  text-align: center;
+  padding: 2rem;
+  padding: 0 6rem;
+}
+
+.titles h1 {
+  padding-bottom: 0.5rem;
+  font-size: 3em;
+}
+
+.titles p{
+  font-size: 1.5em;
+}
+
+
+label {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+li{
+  list-style: none;
+}
+
+.rótulo {
+ font-size: 1.25em;
+ font-weight: 600;
+ color: var(--cor-blue);
+ padding-bottom: 0.5rem;
+}
+
+
+button {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem 14rem;
+  background-color: var(--cor-lightBlue);
+  border: 2px dotted var(--cor-blue);
+  border-radius: 8px;
+  color: var(--cor-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#removeBtn{
+  display: flex;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 200;
+  color: red;
+  
+
+}
+
+.submitBtn {
+  padding: 0.5rem 3rem;
+  background-color: var(--cor-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: var(--cor-black);
+}
+
+.submitBtn:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(11, 11, 19, 0.753);
+ }
