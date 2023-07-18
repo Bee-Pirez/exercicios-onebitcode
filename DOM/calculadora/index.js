@@ -17,4 +17,5 @@ document.getElementById("clear").addEventListener("click", function () {
   input.value = ""
   input.focus()
   resultInput.value = ""
+  resultInput.classList.remove("error")
 })
