@@ -49,3 +49,50 @@ h2 {
   outline: none;
   border-color: var(--color-lightPurple);
 }
+
+#start {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: var(--color-btn);
+  background-color: #DDCEEF;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.685);
+  border-radius: 4rem;
+  padding: 1rem;
+  transition: 0.2s;
+  box-shadow: 2px 2px 20px 2px rgba(181, 95, 231, 0.48);
+}
+   
+#start:hover {
+  color: var(--color-btnHover);
+  background-color: #CFC0E0;
+  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 10px 0px rgba(181, 95, 231, 0.48);
+}
+
+#gameBoard {
+  font-family: 'Pangolin', cursive;
+  background-color: var(--color-lightPurple);
+  display: grid;
+  grid-template-columns: 9rem 9rem 9rem;
+  grid-template-rows: 9rem 9rem 9rem;
+  gap: .5rem;
+  border-radius: 1rem;
+  max-width: 30rem;
+}
+
+#gameBoard span {
+  background-color: var(--color-darkPurple);
+  display: grid;
+  place-content: center;
+  font-size: 5rem;
+  border-radius: 1rem;
+}
+
+#gameBoard span.win {
+  background-color: var(--color-winningBlock);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
