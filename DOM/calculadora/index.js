@@ -13,3 +13,8 @@ document.querySelectorAll(".charKey").forEach(function (charKeyBtn) {
   })
 })
 
+document.getElementById("clear").addEventListener("click", function () {
+  input.value = ""
+  input.focus()
+  resultInput.value = ""
+})
