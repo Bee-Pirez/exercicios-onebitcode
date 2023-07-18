@@ -6,3 +6,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-darkPurple: #332267;
+  --color-lightPurple: #6748C5;
+  --color-winningBlock: #39B167;
+  --color-btn: #867EB8;
+  --color-btnHover: #716a9c;
+  ;
+}
