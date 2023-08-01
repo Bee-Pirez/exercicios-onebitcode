@@ -65,3 +65,66 @@ function getWinRegions() {
 
   return winRegions;
 }
+
+// Desabilita uma região do tabuleiro para que não seja mais clicável
+function disableRegion(element) {
+  element.classList.remove('cursor-pointer');
+  element.removeEventListener('click', handleBoardClick);
+}
+
+// Pinta as regiões onde o jogador venceu e mostra seu nome na tela
+function handleWin(regions) {
+  regions.forEach(function (region) {
+    document.querySelector('[data-region="' + region + '"]').classList.add('win');
+  });
+  const playerName = document.getElementById(turnPlayer).value;
+  document.querySelector('h2').innerHTML = playerName + ' venceu!';
+  // Remover os eventos de clique dos campos restantes
+  boardRegions.forEach(function (element) {
+    element.classList.remove('cursor-pointer');
+    element.removeEventListener('click', handleBoardClick);
+  });
+}
+
+//tratar o clique em uma célula do tabuleiro
+function handleBoardClick(ev) {
+  // Obtém os índices da região clicada
+  const span = ev.currentTarget;
+  const region = span.dataset.region; // N.N
+  const [row, column] = region.split('.'); // ["N", "N"]
+
+  // Verifica se a célula já está preenchida, se sim, não faz nada
+  if (vBoard[row][column]) {
+    return;
+  }
+
+  // Marca a região clicada com o símbolo do jogador
+  if (turnPlayer === 'player1') {
+    span.innerText = 'X';
+    vBoard[row][column] = 'X';
+  } else {
+    span.innerText = 'O';
+    vBoard[row][column] = 'O';
+  }
+
+  // Limpa o console e exibe nosso tabuleiro virtual
+  console.clear();
+  console.table(vBoard);
+
+  // Desabilita a região clicada
+  disableRegion(span);
+
+  // Verifica se alguém venceu
+  const winRegions = getWinRegions();
+  if (winRegions.length > 0) {
+    handleWin(winRegions);
+  } else if (vBoard.flat().includes('')) {
+    turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1';
+    updateTitle();
+  } else {
+    document.querySelector('h2').innerHTML = 'Empate!';
+  }
+}
+
+// Adiciona o evento no botão que inicia o jogo
+document.getElementById('start').addEventListener('click', initializeGame);
