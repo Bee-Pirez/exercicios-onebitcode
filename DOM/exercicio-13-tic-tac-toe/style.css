@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,11 +8,10 @@
 
 :root {
   --color-darkPurple: #332267;
-  --color-lightPurple: #6748C5;
-  --color-winningBlock: #39B167;
-  --color-btn: #867EB8;
+  --color-lightPurple: #6748c5;
+  --color-winningBlock: #39b167;
+  --color-btn: #867eb8;
   --color-btnHover: #716a9c;
-  ;
 }
 
 body {
@@ -21,7 +20,7 @@ body {
   gap: 2rem;
   align-items: center;
   margin: 3rem;
-  font-family: 'Pangolin', cursive, sans-serif;
+  font-family: "Pangolin", cursive, sans-serif;
 }
 
 h1 {
@@ -30,7 +29,7 @@ h1 {
 }
 
 h2 {
- font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .players {
@@ -53,9 +52,9 @@ h2 {
 #start {
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   color: var(--color-btn);
-  background-color: #DDCEEF;
+  background-color: #ddceef;
   border-style: solid;
   border-color: rgba(255, 255, 255, 0.685);
   border-radius: 4rem;
@@ -63,20 +62,21 @@ h2 {
   transition: 0.2s;
   box-shadow: 2px 2px 20px 2px rgba(181, 95, 231, 0.48);
 }
-   
+
 #start:hover {
   color: var(--color-btnHover);
-  background-color: #CFC0E0;
-  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 10px 0px rgba(181, 95, 231, 0.48);
+  background-color: #cfc0e0;
+  box-shadow: -2px -1px 8px 0px #ffffff,
+    2px 1px 10px 0px rgba(181, 95, 231, 0.48);
 }
 
 #gameBoard {
-  font-family: 'Pangolin', cursive;
+  font-family: "Pangolin", cursive;
   background-color: var(--color-lightPurple);
   display: grid;
   grid-template-columns: 9rem 9rem 9rem;
   grid-template-rows: 9rem 9rem 9rem;
-  gap: .5rem;
+  gap: 0.5rem;
   border-radius: 1rem;
   max-width: 30rem;
 }

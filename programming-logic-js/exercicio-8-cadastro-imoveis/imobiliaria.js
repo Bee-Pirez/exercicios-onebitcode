@@ -37,6 +37,7 @@ do  {
           "\nBanheiros: " + imoveis[i].banheiros +
           "\nPossui Garagem? " + imoveis[i].garagem
         )
+        console.log(imoveis)
       }
       break
     case "3":
