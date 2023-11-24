@@ -27,7 +27,7 @@ export function handleTyping(ev) {
     input.value = input.value.slice(0, -1)
   }
   if (ev.key === "Enter") {
-    //clicar cntrl espaço apra detectar onde tem o arquivo
+    //clicar cntrl espaço para detectar onde tem o arquivo
     calculate()
   }
 }

@@ -4,3 +4,10 @@
   margin: 0px;
   padding: 0px;
 }
+
+body{
+  background: var(
+    --gradiente,
+    linear-gradient(180deg, #010101 0%, #0e2739 100%)
+  );
+}
