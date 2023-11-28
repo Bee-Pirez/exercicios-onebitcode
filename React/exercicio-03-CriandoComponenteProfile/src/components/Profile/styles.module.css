@@ -36,3 +36,8 @@
   gap: 1rem;
   align-items: center;
 }
+
+.followButton {
+  margin: 1rem;
+  padding: .125rem .5rem;
+}
