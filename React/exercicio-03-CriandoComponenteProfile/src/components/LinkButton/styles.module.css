@@ -11,7 +11,7 @@
   transition: all .6s ease;
   width: 10rem;
 }
-.wrapper>a:hover {
-  box-shadow: 0 10px 15px -3px #56251a, 0 4px 6px -2px #56251a;
+.wrapper:hover {
+  box-shadow: 0 10px 20px -7px rgb(67, 86, 26), 0 4px 6px -2px #181806;
   bottom: .25rem;
 }
