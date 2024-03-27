@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday</title>
+  
+  <script type="module" src="./birthdate.js"></script>
+  <link rel="stylesheet" href="./birthdate.css" />
+</head>
+<body>
+  <img src="./img/wave.svg">
+  <div class="container">
+    <form class="form">
+      <h1 class="title">Birthday</h1>
+      <label for="birthdate">
+        <p>Quando Você nasceu?</p>
+      </label>
+      <input id="birthdateInput" placeholder="Date YYYY/MM/DD" class="birthdate input" type="text">
+      <button class="btn" type="submit">Calcular!</button>
+    </form>
+  </div>
+  <div id="resultContainer" class="result-container"></div>
+</body>
+</html>

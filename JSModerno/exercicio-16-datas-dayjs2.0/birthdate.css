@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/************** Reset *********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --color-creme: #FFF3D3;
+  --color-amarelo: #FEC31E;
+  --color-azul: #7FC7D6;
+  --color-roxo: #9FA3EC;
+  --color-rosa: #F2ABE7;
+}
+
+h1{
+  color: var(--color-creme);
+  margin: 3rem 1rem 1rem 1rem;
+  font-size: 3rem;
+}
+
+p{
+  color: white;
+  font-size: 1rem;
+}
+
+
+
+::selection {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 80px;
+}
+
+.form {
+  width: 600px;
+  height: 400px;
+  background-image: linear-gradient(to bottom, #424242,#212121);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+
+.input {
+  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
+  width: 20rem;
+  background-color: inherit;
+  color: var(--color-creme);
+  border: none;
+  outline: none;
+}
+
+.birthdate {
+  border-bottom: 1px solid var(--color-creme);
+  transition: all 400ms;
+}
+
+.birthdate:hover {
+  background-color: #424242;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn {
+  height: 3rem;
+  width: 20rem;
+  margin-top: 3rem;
+  background-color: var(--color-creme);
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+  transition: all 400ms;
+  box-shadow: 0 0 10px  var(--color-creme), 0 0 10px var(--color-creme);
+}
+
+.btn:hover {
+  background-color: var(--color-creme);
+  box-shadow: none;
+}
