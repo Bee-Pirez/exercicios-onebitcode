@@ -1,6 +1,5 @@
 let transactions = [];
 
-//função para criar um elemento do DOM para o contain er da transação
 function createTransactionContainer(id) {
   const container = document.createElement("div");
   container.classList.add("transaction");
@@ -15,23 +14,18 @@ function createTransactionTitle(name) {
   return title;
 }
 
-//usar uma api para lidar com valores que mudam de lugar para lugar
 function createTransactionAmount(amount) {
   const span = document.createElement("span");
   span.classList.add("transaction-amount");
-  //namespace intl para criar um objeto que vai ser capaz de formatar os números
-  //primeiro cria o formatador(objeto capaz de formatar valores em um determinado modelo e um objeto de opç~eos como segundo parâmetro)
   const formater = Intl.NumberFormat("pt-BR", {
     compactDisplay: "long",
     currency: "BRL",
     style: "currency",
   });
   const formatedAmount = formater.format(amount);
-  //crédito
   if (amount > 0) {
     span.textContent = `${formatedAmount} C`;
     span.classList.add("credit");
-    //débito
   } else {
     span.textContent = `${formatedAmount} D`;
     span.classList.add("debit");
@@ -67,7 +61,6 @@ function createDeleteTransactionButton(id) {
   return deleteBtn;
 }
 
-//vai receber um objeto de transação
 function renderTransaction(transaction) {
   const container = createTransactionContainer(transaction.id);
   const title = createTransactionTitle(transaction.name);
